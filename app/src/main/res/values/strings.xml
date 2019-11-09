@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Sport Cup</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="sport_cup">Sport Cup</string>
+    <string name="phone_number">09*********</string>
+    <string name="send_code">ارسال کد</string>
+    <string name="get_code">دریافت رمز</string>
+    <string name="filling_code">لطفا رمز دریافتی را وارد کنید !</string>
+    <string name="code">رمز یکبار مصرف</string>
+    <string name="confirm">تایید</string>
+    <string name="item1">item1</string>
+    <string name="item2">item2</string>
+    <string name="item3">item3</string>
+    <string name="item4">item4</string>
+    <string name="communicate">Communicate</string>
+    <string name="item5">item5</string>
+    <string name="item6">item6</string>
+    <string name="near_me">نزدیک من</string>
+    <string name="most_viewed">پربازدید ها</string>
+    <string name="all_items">همه</string>
+</resources>
