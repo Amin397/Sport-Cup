@@ -8,11 +8,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_navigation"
+        android:id="@+id/bottom_navigation_left_id"
         android:layout_width="0dp"
         android:layout_weight="0.3333"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_appbar_menu"
+        app:menu="@menu/bottom_appbar_menu_left"
         android:animateLayoutChanges="true"
         app:itemIconTint="@android:color/white"
         app:itemTextColor="@android:color/white"/>
@@ -23,11 +23,11 @@
         android:layout_height="wrap_content" />
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_nassvigation"
+        android:id="@+id/bottom_navigation_right_id"
         android:layout_width="0dp"
         android:layout_weight="0.3333"
         android:layout_height="wrap_content"
-        app:menu="@menu/bottom_appba2_menu"
+        app:menu="@menu/bottom_appba2_menu_right"
         android:paddingRight="@dimen/padding_20dp"
         android:animateLayoutChanges="true"
         app:itemIconTint="@android:color/white"

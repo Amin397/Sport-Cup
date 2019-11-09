@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_favorites"
+        android:id="@+id/nav_mostviewed_id"
         android:enabled="true"
         android:icon="@drawable/ic_star_border_black_24dp"
-        android:title="پربازدید ها"
+        android:title="@string/most_viewed"
         app:showAsAction="ifRoom" />
 
     <item
-        android:id="@+id/action_nrb4y"
+        android:id="@+id/nav_allitems_id"
         android:enabled="true"
         android:icon="@drawable/ic_format_align_justify_black_24dp"
         android:title="@string/all_items"
