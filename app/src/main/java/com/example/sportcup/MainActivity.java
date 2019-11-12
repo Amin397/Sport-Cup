@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         bottom_nav_right.setOnNavigationItemSelectedListener(mRightOnNavigationItemSelectedListener);
 
         setSupportActionBar(toolbar);
-
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);

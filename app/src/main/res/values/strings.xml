@@ -23,4 +23,7 @@
     <string name="near_me">نزدیک من</string>
     <string name="most_viewed">پربازدید ها</string>
     <string name="all_items">همه</string>
+    <string name="sample_name">سالن بعثت</string>
+    <string name="rate_sample">4.1 امتیاز</string>
+    <string name="cost_sample">54.000</string>
 </resources>
