@@ -40,8 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
+        android:backgroundTint="@color/fab_detaile_color"
         app:layout_anchor="@id/appbar_item_detaile_id"
         app:layout_anchorGravity="bottom|end"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:fabCustomSize="75dp"
+        android:src="@drawable/ic_location_on_white_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

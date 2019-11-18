@@ -5,5 +5,5 @@
     <color name="colorAccent">#22175C</color>
     <color name="color_withe">#ffffff</color>
     <color name="color_black">#000000</color>
-    <color name="golden_rate">#FFC000</color>
+    <color name="fab_detaile_color">#FFC400</color>
 </resources>
