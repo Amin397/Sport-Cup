@@ -1,4 +1,4 @@
-package com.example.sportcup;
+package com.example.sportcup.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.sportcup.R;
 import com.example.sportcup.fragments.AllItems;
 import com.example.sportcup.fragments.MostViewed;
 import com.example.sportcup.fragments.NearMe;

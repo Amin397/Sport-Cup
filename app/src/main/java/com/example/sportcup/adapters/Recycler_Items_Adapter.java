@@ -1,6 +1,7 @@
 package com.example.sportcup.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.example.sportcup.R;
+import com.example.sportcup.activities.Item_detiels;
 import com.example.sportcup.models.Recycler_Items_Models;
 
 import java.util.List;
@@ -45,10 +47,9 @@ public class Recycler_Items_Adapter extends RecyclerView.Adapter<Recycler_Items_
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "item clicked", Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context , Item_detiels.class));
             }
         });
-
     }
 
     @Override

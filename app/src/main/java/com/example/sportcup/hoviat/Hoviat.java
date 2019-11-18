@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
-import com.example.sportcup.MainActivity;
+import com.example.sportcup.activities.MainActivity;
 import com.example.sportcup.R;
 
 
