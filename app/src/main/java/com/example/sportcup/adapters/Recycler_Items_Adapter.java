@@ -36,7 +36,7 @@ public class Recycler_Items_Adapter extends RecyclerView.Adapter<Recycler_Items_
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Recycler_Items_Models rm = models.get(i);
+        final Recycler_Items_Models rm = models.get(i);
 
         viewHolder.image.setImageResource(rm.getImage());
         viewHolder.name.setText(rm.getName());
@@ -47,7 +47,10 @@ public class Recycler_Items_Adapter extends RecyclerView.Adapter<Recycler_Items_
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context , Item_detiels.class));
+                Intent intent = new Intent(context , Item_detiels.class);
+                intent.putExtra("name" , rm.getName());
+                intent.putExtra("image" , rm.getImage());
+                context.startActivity(intent);
             }
         });
     }
