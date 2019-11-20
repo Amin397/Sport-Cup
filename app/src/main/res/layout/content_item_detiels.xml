@@ -184,10 +184,36 @@
             android:layout_margin="@dimen/margin_50dp"
             android:textColor="@color/color_withe"
             android:textStyle="bold"
+            android:id="@+id/btn_show_table_sans_id"
             android:textSize="@dimen/textsize_18sp"
             android:textAlignment="center"
             android:background="@drawable/back_button_reserv"
             android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginRight="@dimen/margin_5dp"
+            android:layout_below="@id/btn_show_table_sans_id"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_weight="0.94"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@color/gray_color"/>
+
+
+            <TextView
+                android:layout_weight="0.06"
+                android:text="@string/comments"
+                android:id="@+id/txt_com"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
 
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
