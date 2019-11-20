@@ -123,4 +123,5 @@
     <string name="address">آدرس :</string>
     <string name="address_content">ابتدای محمد شهر ، انتهای خیابان چمن ، خیابان جنگلبانی ، بعد از کوچه صنعتگران</string>
     <string name="phone">تلفن تماس :</string>
+    <string name="show_table">مشاهده جدول زمان بندی سانس ها</string>
 </resources>
