@@ -14,7 +14,8 @@ public class Item_detiels extends AppCompatActivity {
 
     Toolbar toolbar;
     CollapsingToolbarLayout collapsingToolbarLayout;
-
+    FloatingActionButton fab_location;
+    FloatingActionButton fab_mark;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,8 @@ public class Item_detiels extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar_item_detailes_id);
         collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collaps_toolbar_items_id);
+        fab_location = (FloatingActionButton) findViewById(R.id.fab_location_id);
+        fab_mark = (FloatingActionButton) findViewById(R.id.fab_mark_item_id);
 
         toolbar.setTitle(getIntent().getStringExtra("name"));
         setSupportActionBar(toolbar);
@@ -31,13 +34,26 @@ public class Item_detiels extends AppCompatActivity {
 
         collapsingToolbarLayout.setBackgroundResource(imagepath);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_location_id);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "نقشه و موقعیت سالن ورزشی !", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+        fab_location.setOnClickListener(mLocationOnClickListener);
+        fab_mark.setOnClickListener(mMarkOnClickListener);
     }
+
+    private FloatingActionButton.OnClickListener mLocationOnClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Snackbar.make(view, "نقشه و موقعیت سالن ورزشی !", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+    };
+
+    private FloatingActionButton.OnClickListener mMarkOnClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Snackbar.make(view, "آیتم نشان شد !", Snackbar.LENGTH_LONG)
+                    .setAction("لغو", null).show();
+        }
+    };
 }

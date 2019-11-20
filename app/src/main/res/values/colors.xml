@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#DFC42155</color>
+    <color name="fab_mark_color">#216AC4</color>
     <color name="colorPrimaryDark">#6F1330</color>
     <color name="colorAccent">#22175C</color>
     <color name="color_withe">#ffffff</color>
     <color name="color_black">#000000</color>
     <color name="fab_detaile_color">#FFC400</color>
-    <color name="gray_color">#D5D5D2D2</color>
+    <color name="gray_color">#C1E4E2E2</color>
     <color name="color_textview_in_gray_back">#6B6A6A</color>
 </resources>
