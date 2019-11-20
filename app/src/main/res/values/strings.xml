@@ -116,4 +116,11 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="time_access">ساعت پاسخگویی و سرویس دهی :</string>
+    <string name="example">روز های عادی از ساعت 10:00 تا 21:00 و پنجشنبه و جمعه از ساعت 12:00 تا 20:00</string>
+    <string name="days_service">روز های سرویس دهی :</string>
+    <string name="day_service_content">همه روزه با هماهنگی قبلی</string>
+    <string name="address">آدرس :</string>
+    <string name="address_content">ابتدای محمد شهر ، انتهای خیابان چمن ، خیابان جنگلبانی ، بعد از کوچه صنعتگران</string>
+    <string name="phone">تلفن تماس :</string>
 </resources>

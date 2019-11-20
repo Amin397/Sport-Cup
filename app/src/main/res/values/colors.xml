@@ -6,4 +6,6 @@
     <color name="color_withe">#ffffff</color>
     <color name="color_black">#000000</color>
     <color name="fab_detaile_color">#FFC400</color>
+    <color name="gray_color">#D5D5D2D2</color>
+    <color name="color_textview_in_gray_back">#6B6A6A</color>
 </resources>
