@@ -2,7 +2,9 @@ package com.example.sportcup.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +16,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.sportcup.R;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView navigationView;
     BottomNavigationView bottom_nav_left;
     BottomNavigationView bottom_nav_right;
+    FloatingActionButton fab_adItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_id);
         bottom_nav_left = (BottomNavigationView) findViewById(R.id.bottom_navigation_left_id);
         bottom_nav_right = (BottomNavigationView) findViewById(R.id.bottom_navigation_right_id);
+        fab_adItem = (FloatingActionButton) findViewById(R.id.fab_add_item_id);
 
+        fab_adItem.setOnClickListener(mFabAddItemClickListener);
         bottom_nav_left.setOnNavigationItemSelectedListener(mLeftOnNavigationItemsSelectedListener);
         bottom_nav_left.setSelectedItemId(R.id.nav_allitems_id);
         bottom_nav_right.setOnNavigationItemSelectedListener(mRightOnNavigationItemSelectedListener);
@@ -53,6 +59,15 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(mNavigationDrawerItemSelectedListener);
 
     }
+
+    private FloatingActionButton.OnClickListener mFabAddItemClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Snackbar.make(view, "افزودن آیتم جدید", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        }
+    };
 
     private BottomNavigationView.OnNavigationItemSelectedListener mRightOnNavigationItemSelectedListener
              = new BottomNavigationView.OnNavigationItemSelectedListener() {
