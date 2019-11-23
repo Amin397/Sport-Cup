@@ -5,7 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.sportcup.hoviat.Hoviat;
+import com.example.sportcup.activities.hoviat.Hoviat;
 import com.example.sportcup.R;
 
 public class SplashScreen extends AppCompatActivity {

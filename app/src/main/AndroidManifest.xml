@@ -9,12 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.marked_items.MarkedItems"></activity>
+        <activity android:name=".activities.my_items.MyItems" />
+        <activity android:name=".activities.profile.Profile" />
+        <activity android:name=".add_new_item.AddNewItem" />
         <activity
-            android:name=".activities.Item_detiels"
+            android:name=".activities.item_detaile.Item_detiels"
             android:label="@string/title_activity_item_detiels"
             android:parentActivityName=".activities.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".hoviat.Hoviat" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.hoviat.Hoviat" />
         <activity
             android:name=".splash_screen.SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">

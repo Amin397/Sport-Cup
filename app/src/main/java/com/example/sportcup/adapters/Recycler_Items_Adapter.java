@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.example.sportcup.R;
-import com.example.sportcup.activities.Item_detiels;
+import com.example.sportcup.activities.item_detaile.Item_detiels;
 import com.example.sportcup.models.Recycler_Items_Models;
 
 import java.util.List;

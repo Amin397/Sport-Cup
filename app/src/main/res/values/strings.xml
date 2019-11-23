@@ -14,8 +14,6 @@
     <string name="code">رمز یکبار مصرف</string>
     <string name="confirm">تایید</string>
     <string name="item1">item1</string>
-    <string name="item2">item2</string>
-    <string name="item3">item3</string>
     <string name="item4">item4</string>
     <string name="communicate">Communicate</string>
     <string name="item5">item5</string>
@@ -127,4 +125,7 @@
     <string name="comments">نظرات و پیشنهادات شما</string>
     <string name="vizhegiha">ویژگی ها</string>
     <string name="vizhegi_content">سالن سرپوشیده بعثت ویژه استفاده از ورزش های سالنی مانند فوتسال و والیبال و هندبال ،دارای سبد های متحرک بسکتبال و همچنین سکو های تماشاگران .سانس های یک ساعت و نیم با کیفیت بالا</string>
+    <string name="profile">حساب کاربری</string>
+    <string name="added_items">آیتم های من</string>
+    <string name="marked">نشان شده ها</string>
 </resources>

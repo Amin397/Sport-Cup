@@ -1,5 +1,6 @@
 package com.example.sportcup.activities;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -20,6 +21,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.sportcup.R;
+import com.example.sportcup.activities.marked_items.MarkedItems;
+import com.example.sportcup.activities.my_items.MyItems;
+import com.example.sportcup.activities.profile.Profile;
+import com.example.sportcup.add_new_item.AddNewItem;
 import com.example.sportcup.fragments.AllItems;
 import com.example.sportcup.fragments.MostViewed;
 import com.example.sportcup.fragments.NearMe;
@@ -64,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
              = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Snackbar.make(view, "افزودن آیتم جدید", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+            startActivity(new Intent(MainActivity.this , AddNewItem.class));
         }
     };
 
@@ -138,16 +142,16 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             switch (menuItem.getItemId()){
-                case R.id.nav_item1_id:{
-                    Toast.makeText(MainActivity.this, "item1", Toast.LENGTH_SHORT).show();
+                case R.id.nav_profile_item_id:{
+                    startActivity(new Intent(MainActivity.this , Profile.class));
                     break;
                 }
-                case R.id.nav_item2_id:{
-                    Toast.makeText(MainActivity.this, "item2", Toast.LENGTH_SHORT).show();
+                case R.id.nav_my_items_id:{
+                    startActivity(new Intent(MainActivity.this , MyItems.class));
                     break;
                 }
-                case R.id.nav_item3_id:{
-                    Toast.makeText(MainActivity.this, "item3", Toast.LENGTH_SHORT).show();
+                case R.id.nav_marked_id:{
+                    startActivity(new Intent(MainActivity.this , MarkedItems.class));
                     break;
                 }
                 case R.id.nav_item4_id:{

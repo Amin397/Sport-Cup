@@ -1,4 +1,4 @@
-package com.example.sportcup.hoviat;
+package com.example.sportcup.activities.hoviat;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.example.sportcup.activities;
+package com.example.sportcup.activities.item_detaile;
 
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;

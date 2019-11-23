@@ -5,17 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_item1_id"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="@string/item1" />
+            android:id="@+id/nav_profile_item_id"
+            android:icon="@drawable/ic_profile_black_24dp"
+            android:title="@string/profile" />
         <item
-            android:id="@+id/nav_item2_id"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/item2" />
+            android:id="@+id/nav_my_items_id"
+            android:icon="@drawable/ic_my_items_black_24dp"
+            android:title="@string/added_items" />
         <item
-            android:id="@+id/nav_item3_id"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/item3" />
+            android:id="@+id/nav_marked_id"
+            android:icon="@drawable/ic_marked_black_24dp"
+            android:title="@string/marked" />
         <item
             android:id="@+id/nav_item4_id"
             android:icon="@drawable/ic_menu_manage"
