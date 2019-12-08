@@ -39,13 +39,12 @@
     <string name="profile">حساب کاربری</string>
     <string name="added_items">آیتم های من</string>
     <string name="marked">نشان شده ها</string>
-    <string name="booki">booki</string>
-    <string name="welcome_back">welcome back</string>
-    <string name="read_it_together">read it together</string>
+    <string name="welcome_back">خوش آمدید !</string>
+    <string name="read_it_together">برنامه کاربردی برای رزرو سالن های ورزشی با تخفیف و امکانات بیشتر !</string>
     <string name="sign_up">sign up</string>
-    <string name="forget_password">forget password</string>
-    <string name="login">login</string>
-    <string name="skip">skip</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="forget_password">رمز عبورم را فراموش کردم !</string>
+    <string name="login">ورود</string>
+    <string name="skip">نام کاربری جدید</string>
+    <string name="email">نام کاربری</string>
+    <string name="password">رمز عبور</string>
 </resources>

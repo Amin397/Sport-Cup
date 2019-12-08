@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.marked_items.MarkedItems"></activity>
+        <activity android:name=".activities.newAccount.NewAccount"></activity>
+        <activity android:name=".activities.marked_items.MarkedItems" />
         <activity android:name=".activities.my_items.MyItems" />
         <activity android:name=".activities.profile.Profile" />
         <activity android:name=".add_new_item.AddNewItem" />
@@ -20,7 +21,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.hoviat.Hoviat" />
         <activity
-            android:name=".splash_screen.SplashScreen"
+            android:name=".activities.splash_screen.SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

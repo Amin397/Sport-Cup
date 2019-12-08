@@ -24,11 +24,7 @@ public class Item_detiels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_detiels);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar_item_detailes_id);
-        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collaps_toolbar_items_id);
-        fab_location = (FloatingActionButton) findViewById(R.id.fab_location_id);
-        fab_mark = (FloatingActionButton) findViewById(R.id.fab_mark_item_id);
-        txt_vizhegiha = (TextView) findViewById(R.id.txt_vizhegiha_id);
+        initView();
 
         toolbar.setTitle(getIntent().getStringExtra("name"));
         setSupportActionBar(toolbar);
@@ -40,6 +36,14 @@ public class Item_detiels extends AppCompatActivity {
         fab_mark.setOnClickListener(mMarkOnClickListener);
 
         txt_vizhegiha.setOnClickListener(mVizhegihaClickListener);
+    }
+
+    private void initView() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar_item_detailes_id);
+        collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collaps_toolbar_items_id);
+        fab_location = (FloatingActionButton) findViewById(R.id.fab_location_id);
+        fab_mark = (FloatingActionButton) findViewById(R.id.fab_mark_item_id);
+        txt_vizhegiha = (TextView) findViewById(R.id.txt_vizhegiha_id);
     }
 
     private TextView.OnClickListener mVizhegihaClickListener

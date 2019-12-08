@@ -1,10 +1,9 @@
-package com.example.sportcup.splash_screen;
+package com.example.sportcup.activities.splash_screen;
 
 import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
-import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,13 +11,15 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.sportcup.activities.hoviat.Hoviat;
+import com.example.sportcup.activities.MainActivity;
 import com.example.sportcup.R;
+import com.example.sportcup.activities.newAccount.NewAccount;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -26,6 +27,8 @@ public class SplashScreen extends AppCompatActivity {
     private ProgressBar loadProgressBar;
     private RelativeLayout rootView , afteranimation;
     private LinearLayout logos;
+    private Button btn_login;
+    private TextView btn_new_account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,9 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         initView();
+
+        btn_login.setOnClickListener(loginClickListener);
+        btn_new_account.setOnClickListener(newAccountClickListener);
 
         new CountDownTimer(5000, 1000) {
             @Override
@@ -54,12 +60,32 @@ public class SplashScreen extends AppCompatActivity {
         }.start();
     }
 
+    private TextView.OnClickListener newAccountClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            startActivity(new Intent(SplashScreen.this , NewAccount.class));
+            finish();
+        }
+    };
+
+    private Button.OnClickListener loginClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            startActivity(new Intent(SplashScreen.this , MainActivity.class));
+            finish();
+        }
+    };
+
     private void initView() {
         txt_splash = findViewById(R.id.txt_splashname_id);
         loadProgressBar = findViewById(R.id.loadingProgressBar);
         logos = findViewById(R.id.logos);
         rootView = findViewById(R.id.rootview_id);
         afteranimation = findViewById(R.id.afterAnimationView);
+        btn_login = findViewById(R.id.btn_login_id);
+        btn_new_account = findViewById(R.id.btn_new_account_id);
     }
 
     private void animation() {

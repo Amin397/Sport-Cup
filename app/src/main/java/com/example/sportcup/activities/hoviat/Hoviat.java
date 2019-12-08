@@ -23,12 +23,7 @@ public class Hoviat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hoviat);
 
-        lnr_hoviat = findViewById(R.id.lnr_hoviat_id);
-        lnr_code = findViewById(R.id.lnr_code_id);
-        txt_mobile = findViewById(R.id.txt_phone_number_id);
-        txt_code = findViewById(R.id.txt_code_id);
-        btn_sendMobile = findViewById(R.id.btn_send_code_id);
-        btn_confirm = findViewById(R.id.btn_confirm_id);
+        initView();
 
         btn_sendMobile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,5 +44,14 @@ public class Hoviat extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void initView() {
+        lnr_hoviat = findViewById(R.id.lnr_hoviat_id);
+        lnr_code = findViewById(R.id.lnr_code_id);
+        txt_mobile = findViewById(R.id.txt_phone_number_id);
+        txt_code = findViewById(R.id.txt_code_id);
+        btn_sendMobile = findViewById(R.id.btn_send_code_id);
+        btn_confirm = findViewById(R.id.btn_confirm_id);
     }
 }

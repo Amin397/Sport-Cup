@@ -17,7 +17,6 @@
 
         <ImageView
             android:id="@+id/img_item_picture_id"
-            android:src="@drawable/image_back_splash"
             android:scaleType="centerCrop"
             android:padding="4dp"
             android:layout_weight="0.4"

@@ -43,12 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar_id);
-        navigationView = (NavigationView) findViewById(R.id.navigation_view_id);
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_id);
-        bottom_nav_left = (BottomNavigationView) findViewById(R.id.bottom_navigation_left_id);
-        bottom_nav_right = (BottomNavigationView) findViewById(R.id.bottom_navigation_right_id);
-        fab_adItem = (FloatingActionButton) findViewById(R.id.fab_add_item_id);
+        initView();
 
         fab_adItem.setOnClickListener(mFabAddItemClickListener);
         bottom_nav_left.setOnNavigationItemSelectedListener(mLeftOnNavigationItemsSelectedListener);
@@ -63,6 +58,15 @@ public class MainActivity extends AppCompatActivity {
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(mNavigationDrawerItemSelectedListener);
 
+    }
+
+    private void initView() {
+        toolbar = (Toolbar) findViewById(R.id.toolbar_id);
+        navigationView = (NavigationView) findViewById(R.id.navigation_view_id);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout_id);
+        bottom_nav_left = (BottomNavigationView) findViewById(R.id.bottom_navigation_left_id);
+        bottom_nav_right = (BottomNavigationView) findViewById(R.id.bottom_navigation_right_id);
+        fab_adItem = (FloatingActionButton) findViewById(R.id.fab_add_item_id);
     }
 
     private FloatingActionButton.OnClickListener mFabAddItemClickListener
