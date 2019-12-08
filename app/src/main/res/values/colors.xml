@@ -9,4 +9,8 @@
     <color name="fab_detaile_color">#FFC400</color>
     <color name="gray_color">#C1E4E2E2</color>
     <color name="color_textview_in_gray_back">#6B6A6A</color>
+    <color name="colorBackground">#333C46</color>
+    <color name="colorSplashText">#F0F0F0</color>
+    <color name="colorProgressBar">#FFCE511C</color>
+    <color name="colorTextView">#83898E</color>
 </resources>
