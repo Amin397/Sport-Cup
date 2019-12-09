@@ -1,6 +1,7 @@
 package com.example.sportcup.activities;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.FloatingActionButton;
@@ -131,11 +132,27 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    boolean doubleBackToExitPressedOnce = false;
+
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout_id);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (doubleBackToExitPressedOnce){
+            super.onBackPressed();
+            return;
+        }
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "برای خروج دوباره بزنید !", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        } , 2000);
+
+
+
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }

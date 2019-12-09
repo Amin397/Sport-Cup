@@ -105,6 +105,8 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
                 android:textAlignment="center"
+                android:maxLines="1"
+                android:maxLength="20"
                 android:textColor="@color/colorTextView"
                 android:textSize="@dimen/textsize_18sp" />
 
@@ -115,6 +117,8 @@
                 android:layout_marginTop="@dimen/margin_25dp"
                 android:hint="@string/password"
                 android:inputType="textPassword"
+                android:maxLines="1"
+                android:maxLength="20"
                 android:textAlignment="center"
                 android:textColor="@color/colorTextView"
                 android:textSize="@dimen/textsize_18sp" />
@@ -132,6 +136,7 @@
                     android:text="@string/forget_password"
                     android:textColor="@color/fab_mark_color"
                     android:clickable="true"
+                    android:id="@+id/btn_forget_pass_id"
                     android:focusable="true"
                     android:fontFamily="@font/iransans"
                     android:textSize="@dimen/textsize_16sp"

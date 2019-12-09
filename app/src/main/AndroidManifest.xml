@@ -22,6 +22,7 @@
         <activity android:name=".activities.hoviat.Hoviat" />
         <activity
             android:name=".activities.splash_screen.SplashScreen"
+            android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

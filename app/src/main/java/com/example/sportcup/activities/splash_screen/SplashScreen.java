@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
+import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.sportcup.activities.MainActivity;
 import com.example.sportcup.R;
@@ -28,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
     private RelativeLayout rootView , afteranimation;
     private LinearLayout logos;
     private Button btn_login;
-    private TextView btn_new_account;
+    private TextView btn_new_account , btn_forget_pass ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class SplashScreen extends AppCompatActivity {
 
         btn_login.setOnClickListener(loginClickListener);
         btn_new_account.setOnClickListener(newAccountClickListener);
+        btn_forget_pass.setOnClickListener(forgetPassClickListener);
 
         new CountDownTimer(5000, 1000) {
             @Override
@@ -59,6 +62,14 @@ public class SplashScreen extends AppCompatActivity {
             }
         }.start();
     }
+
+    private TextView.OnClickListener forgetPassClickListener
+             = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+
+        }
+    };
 
     private TextView.OnClickListener newAccountClickListener
              = new View.OnClickListener() {
@@ -86,6 +97,7 @@ public class SplashScreen extends AppCompatActivity {
         afteranimation = findViewById(R.id.afterAnimationView);
         btn_login = findViewById(R.id.btn_login_id);
         btn_new_account = findViewById(R.id.btn_new_account_id);
+        btn_forget_pass = findViewById(R.id.btn_forget_pass_id);
     }
 
     private void animation() {
@@ -113,5 +125,22 @@ public class SplashScreen extends AppCompatActivity {
 
             }
         });
+    }
+
+    boolean doubleBackToExitPressedOnce = false;
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce){
+            super.onBackPressed();
+            return;
+        }
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "برای خروج دوباره بزنید !", Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        } , 2000);
     }
 }
