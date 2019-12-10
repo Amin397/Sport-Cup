@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.newAccount.NewAccount"></activity>
+        <activity android:name=".activities.newAccount.NewAccount"/>
         <activity android:name=".activities.marked_items.MarkedItems" />
         <activity android:name=".activities.my_items.MyItems" />
         <activity android:name=".activities.profile.Profile" />

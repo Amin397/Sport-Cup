@@ -45,6 +45,15 @@
     <string name="forget_password">رمز عبورم را فراموش کردم !</string>
     <string name="login">ورود</string>
     <string name="skip">نام کاربری جدید</string>
-    <string name="email">نام کاربری</string>
+    <string name="username">نام کاربری</string>
     <string name="password">رمز عبور</string>
+    <string name="personal_info">اطلاعات شخصی</string>
+    <string name="full_name">نام و نام خانوادگی</string>
+    <string name="ational_code">کد ملی</string>
+    <string name="forced">پر کردن عباراتی که جلوی آنها با علامت قرمز مشخص شده اند اجباری هستند !</string>
+    <string name="account">حساب کاربری</string>
+    <string name="re_password">تکرار رمز عبور</string>
+    <string name="save">ذخیره</string>
+    <string name="mobile_number">موبایل</string>
+    <string name="user_test">بررسی نام کاربری</string>
 </resources>
