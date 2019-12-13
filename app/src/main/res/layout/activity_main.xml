@@ -32,7 +32,7 @@
         android:id="@+id/bar"
         android:layout_gravity="bottom"
         style="@style/Widget.MaterialComponents.BottomAppBar"
-        android:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="@color/colorPrimary"
         app:fabAlignmentMode="center"
         app:fabCradleRoundedCornerRadius="25dp"
         app:hideOnScroll="true"

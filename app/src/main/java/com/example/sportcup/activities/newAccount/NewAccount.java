@@ -217,26 +217,28 @@ public class NewAccount extends AppCompatActivity {
              = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            progress_test.setVisibility(View.VISIBLE);
+            if(userName.getText().toString().isEmpty() || l_user.isErrorEnabled()){
+                Toast.makeText(NewAccount.this, "مقدار ورودی صحیح نیست !", Toast.LENGTH_SHORT).show();
+            }else {
+                progress_test.setVisibility(View.VISIBLE);
 
-            new CountDownTimer(2000, 1000) {
-                @Override
-                public void onTick(long l) {
-
-                }
-
-                @Override
-                public void onFinish() {
-                    //اینو هم بذار اگه خالی بود یوزر نیم چیکار کنه
-                    if (Existed()){
-                        progress_test.setVisibility(View.GONE);
-                        img_test.setImageResource(R.drawable.ic_verified_user_black_24dp);
-                    }else {
-                        progress_test.setVisibility(View.GONE);
-                        img_test.setImageResource(R.drawable.ic_error_outline_red_24dp);
+                new CountDownTimer(2000, 1000) {
+                    @Override
+                    public void onTick(long l) {
                     }
-                }
-            }.start();
+
+                    @Override
+                    public void onFinish() {
+                        if (Existed()){
+                            progress_test.setVisibility(View.GONE);
+                            img_test.setImageResource(R.drawable.ic_verified_user_black_24dp);
+                        }else {
+                            progress_test.setVisibility(View.GONE);
+                            img_test.setImageResource(R.drawable.ic_error_outline_red_24dp);
+                        }
+                    }
+                }.start();
+            }
         }
     };
 
@@ -248,9 +250,25 @@ public class NewAccount extends AppCompatActivity {
              = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            //اینو هم چک کنه اگه همه مقادیر خالی بود چیکار کنه
+            if (fullName.getText().toString().isEmpty() || nationalCode.getText().toString().isEmpty() || phoneNumber.getText().toString().isEmpty()
+            || userName.getText().toString().isEmpty() || password.getText().toString().isEmpty() || re_password.getText().toString().isEmpty()){
+
+                alertDialog = new AlertDialog.Builder(NewAccount.this)
+                        .setTitle("خطا")
+                        .setMessage("لطفا تمامی مقادیر را وار کنید !")
+                        .setCancelable(true)
+                        .setPositiveButton("تایید !", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                AlertDialog builder = alertDialog.create();
+                builder.show();
+            }
+
             if (l_fullName.isErrorEnabled() || l_nationalCode.isErrorEnabled() || l_phoneNumber.isErrorEnabled()
-                    || l_user.isErrorEnabled() || l_pass.isErrorEnabled() || l_repass.isErrorEnabled()){
+                    || l_user.isErrorEnabled() || l_pass.isErrorEnabled() || l_repass.isErrorEnabled() || Existed()){
 
                 alertDialog = new AlertDialog.Builder(NewAccount.this)
                         .setTitle("خطا")
