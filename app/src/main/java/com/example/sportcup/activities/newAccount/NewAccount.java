@@ -1,6 +1,9 @@
 package com.example.sportcup.activities.newAccount;
 
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.CountDownTimer;
@@ -22,8 +25,18 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.sportcup.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Hashtable;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
 
@@ -250,7 +263,11 @@ public class NewAccount extends AppCompatActivity {
              = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            if (fullName.getText().toString().isEmpty() || nationalCode.getText().toString().isEmpty() || phoneNumber.getText().toString().isEmpty()
+
+            sendReqForCreateAccount();
+
+
+            /*if (fullName.getText().toString().isEmpty() || nationalCode.getText().toString().isEmpty() || phoneNumber.getText().toString().isEmpty()
             || userName.getText().toString().isEmpty() || password.getText().toString().isEmpty() || re_password.getText().toString().isEmpty()){
 
                 alertDialog = new AlertDialog.Builder(NewAccount.this)
@@ -265,9 +282,9 @@ public class NewAccount extends AppCompatActivity {
                         });
                 AlertDialog builder = alertDialog.create();
                 builder.show();
-            }
+            }*/
 
-            if (l_fullName.isErrorEnabled() || l_nationalCode.isErrorEnabled() || l_phoneNumber.isErrorEnabled()
+            /*if (l_fullName.isErrorEnabled() || l_nationalCode.isErrorEnabled() || l_phoneNumber.isErrorEnabled()
                     || l_user.isErrorEnabled() || l_pass.isErrorEnabled() || l_repass.isErrorEnabled() || Existed()){
 
                 alertDialog = new AlertDialog.Builder(NewAccount.this)
@@ -283,13 +300,49 @@ public class NewAccount extends AppCompatActivity {
                 AlertDialog builder = alertDialog.create();
                 builder.show();
             }else {
-                sendReqForCreateAccount();
-            }
+            }*/
         }
     };
 
     private void sendReqForCreateAccount() {
-        Toast.makeText(this, "Request", Toast.LENGTH_SHORT).show();
+        RequestQueue queue = Volley.newRequestQueue(NewAccount.this);
+        String URL = "http://al1.best:88/api/signup/";
+        Hashtable<String , String> params = new Hashtable<>();
+        params.put("username" , userName.getText().toString());
+        params.put("password" , password.getText().toString());
+
+        final ProgressDialog dialog ;
+        dialog = new ProgressDialog(NewAccount.this);
+        dialog.setMessage("لطفا صبر کنید ..");
+        dialog.setCancelable(false);
+        dialog.show();
+
+        JSONObject object = new JSONObject(params);
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, URL, object, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                dialog.dismiss();
+
+                try {
+                    String token = response.getString("token");
+                    SharedPreferences.Editor editor = getSharedPreferences("token" , Context.MODE_PRIVATE).edit();
+                    editor.putString("token" ,token);
+                    editor.apply();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                Toast.makeText(NewAccount.this, response.toString(), Toast.LENGTH_LONG).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                dialog.dismiss();
+                Toast.makeText(NewAccount.this, error.toString(), Toast.LENGTH_LONG).show();
+            }
+        });
+        queue.add(request);
     }
 
     private void initView() {
