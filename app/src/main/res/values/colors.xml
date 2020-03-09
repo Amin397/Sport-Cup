@@ -13,4 +13,8 @@
     <color name="colorSplashText">#F0F0F0</color>
     <color name="colorProgressBar">#FFCE511C</color>
     <color name="colorTextView">#83898E</color>
+    <color name="transparentWhite">#80FFFFFF</color>
+    <color name="color_all_items">#9c5782</color>
+    <color name="color_near_me">#a3826b</color>
+    <color name="color_most_view">#698a34</color>
 </resources>

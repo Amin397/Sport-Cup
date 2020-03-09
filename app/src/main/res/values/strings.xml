@@ -56,4 +56,7 @@
     <string name="save">ذخیره</string>
     <string name="mobile_number">موبایل</string>
     <string name="user_test">بررسی نام کاربری</string>
+    <string name="title_allitems">همه</string>
+    <string name="title_nearme">نزدیک من</string>
+    <string name="title_mostview">پربازدید ها</string>
 </resources>

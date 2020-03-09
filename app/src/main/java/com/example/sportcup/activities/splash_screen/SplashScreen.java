@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.os.Handler;
-import android.support.design.widget.TextInputEditText;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+
+import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.textfield.TextInputEditText;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewPropertyAnimator;
@@ -44,6 +46,7 @@ public class SplashScreen extends AppCompatActivity {
     private Button btn_login;
     private TextInputEditText username , password;
     private TextView btn_new_account , btn_forget_pass ;
+    private LottieAnimationView sport_anim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,8 @@ public class SplashScreen extends AppCompatActivity {
         btn_new_account.setOnClickListener(newAccountClickListener);
         btn_forget_pass.setOnClickListener(forgetPassClickListener);
 
+        sport_anim.playAnimation();
+
         new CountDownTimer(5000, 1000) {
             @Override
             public void onTick(long l) {
@@ -68,6 +73,7 @@ public class SplashScreen extends AppCompatActivity {
             public void onFinish() {
                 logos.setVisibility(View.GONE);
                 loadProgressBar.setVisibility(View.GONE);
+                sport_anim.setVisibility(View.GONE);
                 rootView.setBackgroundColor(ContextCompat.getColor(SplashScreen.this , R.color.colorSplashText));
                 txt_splash.setTextColor(Color.parseColor("#DFC42155"));
                 txt_splash.setTextSize(60f);
@@ -96,9 +102,9 @@ public class SplashScreen extends AppCompatActivity {
              = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            sendRequestToLogin();
-            //startActivity(new Intent(SplashScreen.this , MainActivity.class));
-            //finish();
+            //sendRequestToLogin();
+            startActivity(new Intent(SplashScreen.this , MainActivity.class));
+            finish();
         }
     };
 
@@ -143,6 +149,7 @@ public class SplashScreen extends AppCompatActivity {
         btn_login = findViewById(R.id.btn_login_id);
         btn_new_account = findViewById(R.id.btn_new_account_id);
         btn_forget_pass = findViewById(R.id.btn_forget_pass_id);
+        sport_anim = (LottieAnimationView) findViewById(R.id.sport_splash_anim_id);
     }
 
     private void animation() {

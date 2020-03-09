@@ -1,6 +1,6 @@
 package com.example.sportcup.activities.my_items;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.sportcup.R;

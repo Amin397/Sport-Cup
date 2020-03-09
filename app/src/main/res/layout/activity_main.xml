@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,46 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-
-        <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <android.support.v7.widget.Toolbar
-                android:theme="@style/ToolbarTheme"
-                android:layout_width="match_parent"
-                android:id="@+id/toolbar_id"
-                app:layout_scrollFlags="scroll|enterAlways"
-                android:layout_height="?attr/actionBarSize"/>
-
-        </android.support.design.widget.AppBarLayout>
-
     <FrameLayout
-        android:id="@+id/frame_container_main_id"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:id="@+id/frame_layout_id"
+        android:layout_above="@id/bottom_nav_id"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent"/>
 
-    <android.support.design.bottomappbar.BottomAppBar
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:id="@+id/bar"
-        android:layout_gravity="bottom"
-        style="@style/Widget.MaterialComponents.BottomAppBar"
-        app:backgroundTint="@color/colorPrimary"
-        app:fabAlignmentMode="center"
-        app:fabCradleRoundedCornerRadius="25dp"
-        app:hideOnScroll="true"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_nav_id"
+        android:background="@color/color_all_items"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:menu="@menu/main"
+        android:nestedScrollingEnabled="true"
+        android:layout_height="?attr/actionBarSize"/>
 
-        <include layout="@layout/appbar"/>
 
-    </android.support.design.bottomappbar.BottomAppBar>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_add_item_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_add_black_24dp"
-        app:fabCustomSize="70dp"
-        app:layout_anchor="@+id/bar"/>
-</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
